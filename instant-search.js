@@ -1,5 +1,5 @@
 $(document).ready( function() {
-    var client = algoliasearch("HKJ1FXF2TF", '2fe4152f68ab2a4c28036a509749a0d1');
+    var client = algoliasearch('', '');
     var customer_index = client.initIndex('customers');
     var tea_index = client.initIndex('teas');
 
