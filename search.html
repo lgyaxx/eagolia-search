@@ -7,25 +7,31 @@
 
     <style>
         .search-results {
-        z-index: 10000;
-        position: relative;
-        left: 0;
-        top: 0;
+            z-index: 10000;
+            position: relative;
+            left: 0;
+            top: 0;
         }
 
         .search-card {
-        display: none;
-        position: absolute;
-        min-width: 500px;
-        top: 38px;
-        right: 50px;
+            display: none;
+            position: absolute;
+            min-width: 500px;
+            top: 38px;
+            right: 50px;
         }
+
+        .placeholder {
+            min-width: 100%;
+            min-height: 90vh;
+        }
+
     </style>
 
 </head>
 
 <body>
-    <div class="offset-md-3 col-md-3 col-6 search-container px-0">
+    <div class="mtoffset-md-3 col-md-3 col-6 search-container px-0">
         <div class="search-results">
             <div class="card search-card">
                 <div class="card-header py-2 lead">搜索结果</div>
@@ -39,6 +45,8 @@
         </div>
         <input class="form-control col-md-10 col-10 search-input" type="text" placeholder="Search" name="search">
     </div>
+
+    <div class="placeholder"></div>
 
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>

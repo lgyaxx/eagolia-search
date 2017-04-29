@@ -63,7 +63,7 @@ $(document).ready( function() {
         hideSearch();
     });
 
-    $('nav').nextAll().on('click' ,function(){
+    $('search-container').nextAll().on('click' ,function(){
         hideSearch();
     });
 
