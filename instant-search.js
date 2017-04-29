@@ -1,5 +1,5 @@
 $(document).ready( function() {
-    var client = algoliasearch('', '');
+    var client = algoliasearch('YOUR-APP-ID', 'YOUR-SEARCH-ONLY-API-KEY');
     var customer_index = client.initIndex('customers');
     var tea_index = client.initIndex('teas');
 
