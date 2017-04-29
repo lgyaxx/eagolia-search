@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <style>
+        .search-results {
+        z-index: 10000;
+        position: relative;
+        left: 0;
+        top: 0;
+        }
+
+        .search-card {
+        display: none;
+        position: absolute;
+        min-width: 500px;
+        top: 38px;
+        right: 50px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="offset-md-3 col-md-3 col-6 search-container px-0">
+        <div class="search-results">
+            <div class="card search-card">
+                <div class="card-header py-2 lead">搜索结果</div>
+                <div class="card-block pb-3 pt-0 px-0">
+                    <ul class="results list-group"></ul>
+                    <div class="row justify-content-end">
+                        <div class="col-md-4 col-4 mt-1"><span class="small">Powered by </span><img src="Algolia_logo_bg-white.svg" class="img-fluid col-md-4 col-4 px-0"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input class="form-control col-md-10 col-10 search-input" type="text" placeholder="Search" name="search">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+    <script src="instant-search.js"></script>
+</body>
+</html>
