@@ -1,5 +1,5 @@
 $(document).ready( function() {
-    var client = algoliasearch('YOUR-APP-ID', 'YOUR-SEARCH-ONLY-API-KEY');
+    var client = algoliasearch("YOUR-APP-ID", 'YOUR-SEARCH-ONLY-API-KEY');
     var customer_index = client.initIndex('customers');
     var tea_index = client.initIndex('teas');
 
@@ -8,6 +8,7 @@ $(document).ready( function() {
     var body_content = $('nav').next('div');
 
     var search_input_string = '';
+    var old_input = '';
 
     search_input.on('input', (function() {
         if ( $( window ).width() <= 768 ) {
@@ -28,9 +29,9 @@ $(document).ready( function() {
 
         if ( $(this).val() != '' ) {
             search_input_string = $(this).val();
-            var old_input = search_input_string;
+
             setTimeout(function() {
-                if ( search_input_string == old_input ) {
+                if ( search_input_string != old_input ) {
                     $('ul.results').empty();
                     customer_index.search(search_input_string, function (err, customers) {
                         for (var i = 0; i < customers.hits.length; i++) {
@@ -51,8 +52,10 @@ $(document).ready( function() {
                         }
                         addHover();
                     });
+
+                    old_input = search_input_string;
                 }
-            }, 1500);
+            }, 2000);
         }
         else {
             hideSearch();
@@ -63,7 +66,7 @@ $(document).ready( function() {
         hideSearch();
     });
 
-    $('search-container').nextAll().on('click' ,function(){
+    $('nav').nextAll().on('click' ,function(){
         hideSearch();
     });
 
